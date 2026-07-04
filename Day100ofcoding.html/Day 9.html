@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immortals - The Eight Chiranjeevis of Hindu Mythology</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            line-height: 1.6;
+        }
+        
+       
+        header {
+            background: linear-gradient(135deg, #8B0000 0%, #FF6B35 100%);
+            padding: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        
+        nav {
+            background: rgba(0,0,0,0.5);
+            padding: 1rem 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            background: rgba(255,107,53,0.3);
+            transform: translateY(-2px);
+        }
+        
+       
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .container {
+            background: rgba(0,0,0,0.7);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .intro h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #FF6B35;
+        }
+        
+        .intro p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+        
+        .immortal-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(139,0,0,0.1) 0%, rgba(255,107,53,0.1) 100%);
+            border-radius: 10px;
+            border-left: 5px solid #FF6B35;
+        }
+        
+        .immortal-section h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #FF6B35;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+        
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+        
+        .image-container small {
+            display: block;
+            margin-top: 1rem;
+            color: rgba(0,255,0,0.8);
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+        
+        .immortal-section p {
+            font-size: 1.1rem;
+            text-align: justify;
+            margin-top: 1rem;
+        }
+        
+      
+        footer {
+            background: linear-gradient(135deg, #1a1a1a 0%, #8B0000 100%);
+            padding: 3rem 0 1rem;
+            margin-top: 3rem;
+            border-top: 3px solid #FF6B35;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .footer-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            color: #FF6B35;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: #FF6B35;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            color: #999;
+        }
+        
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            main {
+                padding: 1rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .immortal-section {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>The Eight Chiranjeevis</h1>
+            <p>Immortal Beings of Hindu Mythology</p>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#ashwatthama">Ashwatthama</a></li>
+            <li><a href="#mahabali">King Mahabali</a></li>
+            <li><a href="#vyasa">Rishi Veda Vyasa</a></li>
+            <li><a href="#vibhishana">Vibhishana</a></li>
+            <li><a href="#parashurama">Parashurama</a></li>
+            <li><a href="#markandeya">Markandeya</a></li>
+            <li><a href="#kripacharya">Kripacharya</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="container">
+            <div class="intro" id="introduction">
+                <h2>Hanuman Is Not the Only Chiranjeevi: Other Immortals Still Walk the Earth</h2>
+                <h3>Story by Swaniya Niharika</h3>
+                <p>When we think about immortality in terms of Hindu mythology, Hanuman and Rama's loyal vanara immediately comes to our mind, a symbol of the strength, humility, and unwavering bhakti. But what if we tell you that Hanuman is not the only one who is destined to walk on Earth as long as the Earth shall reign? In the sprawling and layered continuum of Sanatana Dharma, there exists a mystical class of beings called the Astha Chiranjeevis. Eight immortals who have been chosen not for their own notoriety, but rather to carry forward the pillar of dharma, wisdom, devotion, and cosmic order through the yugas. Each of these beings conveys a deep aspect of the human experience; some are sages, others warriors, kings or outcasts. Ultimately, all are eternal representations of what must endure even after all else is gone. These stories are more than just ancient; they are continuums that are exhaling, still alive amid the chaos of Kali Yuga. Understanding these is not about the possibility of escaping death, but rather what represents something worthy of being lived, eternally speaking. Allow us to introduce you to the immortals that never left us.</p>
+            </div>
+        </div>
+        
+        <div class="immortal-section" id="ashwatthama">
+            <h1>1. Ashwatthama - Eternal Suffering Warrior</h1>
+            <div class="image-container">
+                <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1Iz1ZQ.img?w=616&h=352&m=6&x=295&y=80&s=174&d=174" alt="Ashwatthama">
+                <small>Ashwatthama - Eternal Suffering Warrior</small>
+            </div>
+            <p>The son of Guru Dronacharya, Ashwatthama was a warrior in the Kurukshetra war, and like his father, was skilled and knowledgeable with powerful astras (weapons) he wielded, as well as being extremely brave. However, after seeing Duryodhana's death, he flew into a rage, took revenge, killed sleeping warriors, and attacked the unborn child of Abhimanyu, using a Brahmastra. Lord Krishna cursed him for this, and sent him to roam the Earth forever, wounded, miserable, and unloved. Immortality rather than a blessing without righteousness, is a curse! Ashwatthama teaches us that there is no reckoning for power without dharma, which destroys the soul.</p>
+        </div>
+        
+        <div class="immortal-section" id="mahabali">
+            <h1>2. King Mahabali - The Righteous Asura King</h1>
+            <div class="image-container">
+                <img src="https://springdaleheritage.in/blog-admin/upload/vaamanan.webp" alt="King Mahabali">
+                <small>8 chiranjeevis of Hinduism - King Mahabali</small>
+            </div>
+            <p>Mahabali, a very powerful demon king was great, devoted to his duty, very humble, and generous. Things went awry when he became a threat to the balance of heaven and earth. Vishnu went to tackle this and took the form of a small dwarf Brahmin named Vamana to trick Mahabali to give up everything - granting him immortality and dominion over the realm of Sutala, which Vishnu guards personally. A humility and dharma even an Asura can attain grace. Mahabali teaches us that Ego is not conquered with punishment, it is conquered with surrender.</p>
+        </div>
+        
+        <div class="immortal-section" id="vyasa">
+            <h1>3. Rishi Veda Vyasa - The Ever-expansive Vedic Voice</h1>
+            <div class="image-container">
+                <img src="https://ritsin.com/wp-content/uploads/2023/01/Maharshi-Veda-Vyasa-Guru-of-Gurus.jpg" alt="Rishi Veda Vyasa">
+                <small>8 chiranjeevis of Hinduism - The Rishi Veda Vyasa</small>
+            </div>
+            <p>Veda Vyasa is known for compiling the vedas, recording the Mahabharata, and penning countless Puranas. And what was the purpose of all this? To gather and distribute, or leak out, spiritual knowledge into the future. Scriptures suggest Vyasa continues to live in the Himalayas, helping sages and saints from behind a curtain of separation. Knowledge is eternal, and so is the sage who holds it. Vyasa signifies that wisdom must be protected throughout time.</p>
+        </div>
+        
+        <div class="immortal-section" id="vibhishana">
+            <h1>4. Vibhishana - The Demon who chose Dharma</h1>
+            <div class="image-container">
+                <img src="https://www.jansatta.com/wp-content/uploads/2020/04/mukesh-Rawal-2.jpg" alt="Vibhishana">
+                <small>8 immortals of Hinduism - Vibhishana</small>
+            </div>
+            <p>Brother to Ravana, Vibhishana chose Dharma over familial devotion. He aligned himself with Rama from the very beginning of the battle against his own family, and he became the King of Lanka after Ravana's downfall. He received a long life to help the people of Lanka reestablish Dharma, and he has become a powerful example of inner transformation. Standing for what is true, even at the risk of social exclusion, creates immortal spirit.</p>
+        </div>
+        
+        <div class="immortal-section" id="parashurama">
+            <h1>5. Parashurama - The Warrior Sage Waiting for Kalki</h1>
+            <div class="image-container">
+                <img src="https://i.pinimg.com/736x/4d/72/06/4d72065f937e0e78a5b1ccec767e9033.jpg" alt="Parashurama">
+                <small>8 immortals of Hinduism - Parashurama</small>
+            </div>
+            <p>Parashurama is the sixth avatar of Lord Vishnu. He was sent to eradicate corrupt Kshatriyas who abandoned Dharma. After he completed this mission, he renounced violence, and went into deep meditation. However, the story does not stop there, as scriptures state he will appear in order to be the one to train the last avatar, Kalki, for the final fight of <strong>good vs evil</strong>. Even righteous rage must surrender to peace. True warriors put down their weapons only after justice is restored.</p>
+        </div>
+        
+        <div class="immortal-section" id="markandeya">
+            <h1>6. Markandeya - The Boy Who Defeated Death Through Devotion</h1>
+            <div class="image-container">
+                <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1Iz1ZY.img?w=616&h=411&m=6&x=288&y=87&s=83&d=83" alt="Markandeya">
+                <small>8 immortals of Hinduism - Markandeya</small>
+            </div>
+            <p>Markandeya was supposed to die at the age of 16 years. However, because of his constant devotion to Lord Shiva, this was not to be. Yama, the god of death, came for him at 16 years of age, and just as he was about to take the life of Markandeya, Markandeya held tightly to the Shiva Linga and would not let go. Shiva then came and smote Yama for Markandeya, thus granting him eternal youth and immortality. Also, Markandeya was blessed in that he witnessed Pralaya (cosmic dissolution), because of this, he is also said to have been shown by Vishnu himself different visions of the universe cycle. Markandeya is a personification of pure devotion, which shows all fate can be transcended through pure devotion. Not even death can survive absolute faith.</p>
+        </div>
+        
+        <div class="immortal-section" id="kripacharya">
+            <h1>7. Kripacharya - The Timeless Teacher</h1>
+            <div class="image-container">
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4238a43a-d31a-4469-89c7-9c7efbf8c6a6/dh0o648-c4570290-74a8-4552-aa5c-ab37a17ed5be.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQyMzhhNDNhLWQzMWEtNDQ2OS04OWM3LTljN2VmYmY4YzZhNlwvZGgwbzY0OC1jNDU3MDI5MC03NGE4LTQ1NTItYWE1Yy1hYjM3YTE3ZWQ1YmUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dScy-PrO2GyBj64KyTASja7yrgLwfd8xY7Fm9x5wiWo" alt="Kripacharya">
+                <small>8 immortals of Hinduism - Kripacharya</small>
+            </div>
+            <p>Serving as royal tutor to both the Kauravas and Pandavas, Kripacharya was known for his great insight into Dharma and for holding space and staying prescient during the War of Mahabharata. He was chosen by the gods to live through Kali Yuga, and in the next yuga he will be one of the Saptarishis (Seven Sages). Real wisdom doesn't react; it observes, waits, then educates across generations.</p>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h3>About This Article</h3>
+                    <p>An exploration of the eight immortal beings (Chiranjeevis) in Hindu mythology, each representing different aspects of dharma, wisdom, and eternal principles.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Related Topics</h3>
+                    <ul>
+                        <li><a href="#dharma">Dharma in Hindu Philosophy</a></li>
+                        <li><a href="#mythology">Hindu Mythology</a></li>
+                        <li><a href="#spirituality">Spiritual Teachings</a></li>
+                        <li><a href="#puranas">Ancient Puranas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#ashwatthama">Ashwatthama</a></li>
+                        <li><a href="#mahabali">King Mahabali</a></li>
+                        <li><a href="#vyasa">Rishi Veda Vyasa</a></li>
+                        <li><a href="#vibhishana">Vibhishana</a></li>
+                        <li><a href="#parashurama">Parashurama</a></li>
+                        <li><a href="#markandeya">Markandeya</a></li>
+                        <li><a href="#kripacharya">Kripacharya</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="mailto:contact@immortals.com">Contact Us</a></li>
+                        <li><a href="#newsletter">Newsletter</a></li>
+                        <li><a href="#social">Social Media</a></li>
+                        <li><a href="#feedback">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Eight Chiranjeevis | Story by Swaniya Niharika | All rights reserved.</p>
+                <p>This article is for educational purposes and spiritual understanding.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Linked external CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" <script src="app.js"></script>
+    
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">$</div>
+                    <h1>Finance Dashboard</h1>
+                </div>
+                <div class="header-controls">
+                    <button class="theme-toggle">🌙</button> <!-- Placeholder for theme toggle -->
+                    <div class="time-range">
+                        <button class="active">1M</button>
+                        <button>3M</button>
+                        <button>6M</button>
+                        <button>1Y</button>
+                        <button>ALL</button>
+                    </div>
+                    <button class="export-btn">📥 Generate Report</button> <!-- Placeholder for export -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Last Updated -->
+        <p class="last-updated">Last updated: December 16, 2023, 10:00 AM</p>
+
+        <!-- Metrics Cards -->
+        <section class="metrics">
+            <div class="metric-card">
+                <div class="metric-icon wallet"></div>
+                <div class="metric-content">
+                    <span class="metric-change up">+12.8%</span>
+                    <h3>Total Portfolio</h3>
+                    <p class="metric-value">$135,500</p>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon dollar"></div>
+                <div class="metric-content">
+                    <span class="metric-change up">+5.2%</span>
+                    <h3>Monthly Income</h3>
+                    <p class="metric-value">$12,450</p>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon credit"></div>
+                <div class="metric-content">
+                    <span class="metric-change down">-3.1%</span>
+                    <h3>Total Expenses</h3>
+                    <p class="metric-value">$5,750</p>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon trending"></div>
+                <div class="metric-content">
+                    <span class="metric-change up">+18.5%</span>
+                    <h3>Net Savings</h3>
+                    <p class="metric-value">$6,700</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts Grid -->
+        <section class="charts-grid">
+            <!-- Portfolio Growth (Placeholder Image) -->
+            <div class="chart-large">
+                <h2>Portfolio Growth Over Time</h2>
+                <img src="" alt="Portfolio Growth Chart" class="chart-placeholder">
+            </div>
+
+            <!-- Asset Allocation (CSS-based Pie Chart Simulation) -->
+            <div class="chart-small">
+                <h2>Asset Allocation</h2>
+                <div class="pie-chart">
+                    <div class="pie-segment stocks" style="--percentage: 45.6%"></div>
+                    <div class="pie-segment crypto" style="--percentage: 18.4%"></div>
+                    <div class="pie-segment bonds" style="--percentage: 15.1%"></div>
+                    <div class="pie-segment real-estate" style="--percentage: 20.6%"></div>
+                </div>
+                <ul class="allocation-list">
+                    <li><span class="color-dot stocks"></span> Stocks: 45.6% ($62K)</li>
+                    <li><span class="color-dot crypto"></span> Cryptocurrency: 18.4% ($25K)</li>
+                    <li><span class="color-dot bonds"></span> Bonds: 15.1% ($20.5K)</li>
+                    <li><span class="color-dot real-estate"></span> Real Estate: 20.6% ($28K)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Bottom Section -->
+        <section class="bottom-grid">
+            <!-- Stock Performance (Placeholder Image) -->
+            <div class="chart-medium">
+                <h2>Stock Performance (7 Days)</h2>
+                <img src="https://via.placeholder.com/500x300/ec4899/ffffff?text=Stock+Performance+Chart" alt="Stock Performance Chart" class="chart-placeholder">
+            </div>
+
+            <!-- Monthly Expenses (CSS-based Bar Chart) -->
+            <div class="chart-medium">
+                <h2>Monthly Budget Breakdown</h2>
+                <div class="bar-chart">
+                    <div class="bar-item">
+                        <span>Housing</span>
+                        <div class="bar" style="width: 37%;">$2400</div>
+                    </div>
+                    <div class="bar-item">
+                        <span>Transport</span>
+                        <div class="bar" style="width: 12%;">$800</div>
+                    </div>
+                    <div class="bar-item">
+                        <span>Food</span>
+                        <div class="bar" style="width: 18%;">$1200</div>
+                    </div>
+                    <div class="bar-item">
+                        <span>Entertainment</span>
+                        <div class="bar" style="width: 9%;">$600</div>
+                    </div>
+                    <div class="bar-item">
+                        <span>Healthcare</span>
+                        <div class="bar" style="width: 6%;">$400</div>
+                    </div>
+                    <div class="bar-item">
+                        <span>Utilities</span>
+                        <div class="bar" style="width: 5%;">$350</div>
+                    </div>
+                    <div class="bar-item">
+                        <span>Savings</span>
+                        <div class="bar" style="width: 50%;">$3250</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Holdings Table -->
+        <section class="holdings">
+            <h2>Top Holdings</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Change</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="symbol">AAPL</td>
+                        <td>Apple Inc.</td>
+                        <td>$208.45</td>
+                        <td class="change up">+2.8%</td>
+                        <td>$12,500</td>
+                    </tr>
+                    <tr>
+                        <td class="symbol">MSFT</td>
+                        <td>Microsoft</td>
+                        <td>$402.30</td>
+                        <td class="change up">+1.5%</td>
+                        <td>$15,200</td>
+                    </tr>
+                    <tr>
+                        <td class="symbol">GOOGL</td>
+                        <td>Alphabet</td>
+                        <td>$155.20</td>
+                        <td class="change up">+3.2%</td>
+                        <td>$9,300</td>
+                    </tr>
+                    <tr>
+                        <td class="symbol">TSLA</td>
+                        <td>Tesla</td>
+                        <td>$258.00</td>
+                        <td class="change down">-1.2%</td>
+                        <td>$7,800</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Built with HTML & CSS | © 2023 Your Name</p>
+    </footer>
+</body>
+</html>
